@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio — Darwin Fabián Ducuara Díaz</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #B71C1C, #E53935, #EF5350);
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
+
+        .contenedor {
+            max-width: 850px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25), 0 0 60px rgba(229, 57, 53, 0.3);
+        }
+
+        .cabecera {
+            background: linear-gradient(135deg, #B71C1C, #C62828);
+            color: white;
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cabecera::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: brillo 4s infinite linear;
+        }
+
+        @keyframes brillo {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-style: italic;
+            font-size: 2.2em;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+            letter-spacing: 1px;
+        }
+
+        .subtitulo {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            margin-top: 10px;
+            opacity: 0.9;
+            font-size: 1.05em;
+        }
+
+        .menu {
+            background: linear-gradient(to right, #D32F2F, #E53935, #D32F2F);
+            padding: 18px 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .menu a {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .menu a:hover {
+            background: white;
+            color: #B71C1C;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .seccion {
+            padding: 30px 35px;
+            transition: all 0.3s ease;
+        }
+
+        .s1 { background-color: #FFEBEE; }
+        .s2 { background-color: #FFCDD2; }
+        .s3 { background-color: #F8BBD0; }
+        .s4 { background-color: #FFE0E0; }
+        .s5 { background-color: #FFEBEE; }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: #B71C1C;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            padding: 12px 20px;
+            background: linear-gradient(to right, rgba(229, 57, 53, 0.15), transparent);
+            border-left: 5px solid #E53935;
+            border-radius: 0 12px 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: #C62828;
+            margin: 18px 0 10px;
+            font-size: 1.2em;
+            border-bottom: 2px dotted #EF9A9A;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        p {
+            margin-bottom: 12px;
+            font-size: 1.03em;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        strong {
+            color: #B71C1C;
+            font-weight: bold;
+        }
+
+        .dato {
+            padding: 6px 0;
+            border-bottom: 1px dashed #EF9A9A;
+        }
+
+        .proyecto {
+            background: rgba(255,255,255,0.7);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #E53935;
+            transition: transform 0.3s ease;
+        }
+
+        .proyecto:hover {
+            transform: translateX(8px);
+            box-shadow: -5px 5px 15px rgba(183, 28, 28, 0.1);
+        }
+
+        hr {
+            border: none;
+            height: 4px;
+            background: linear-gradient(to right, transparent, #EF5350, #E53935, #EF5350, transparent);
+        }
+
+        .pie {
+            background: linear-gradient(135deg, #B71C1C, #C62828);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .corazón {
+            display: inline-block;
+            animation: latido 1s infinite alternate;
+        }
+
+        @keyframes latido {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <div class="cabecera">
+        <h1>🔴 DARWIN FABIÁN DUCUARA DÍAZ</h1>
+        <p class="subtitulo">Cartagena del Chairá, Caquetá &nbsp;|&nbsp; Grado 11-1<br>
+        <em>"Investigar, descubrir, servir y crecer"</em></p>
+    </div>
+
+    <nav class="menu">
+        <a href="#sobre-mi">👤 Sobre mí</a>
+        <a href="#formacion">📚 Formación</a>
+        <a href="#habilidades">💪 Habilidades</a>
+        <a href="#proyectos">🚀 Proyectos</a>
+        <a href="#contacto">📬 Contacto</a>
+    </nav>
+
+    <section class="seccion s1" id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Soy de Cartagena del Chairá, Caquetá, y curso el grado 11°. Me considero una persona tolerante, paciente, analítica y empática.</p>
+        <p>Me gusta escuchar a los demás, aprender cosas nuevas y esforzarme por cumplir lo que me propongo. En mi tiempo libre descanso, comparto con mi familia y me preparo para lo que quiero ser.</p>
+        <p><strong>🎯 Mi sueño:</strong> Estudiar Criminalística y trabajar en la DIJIN o SIJIN de Colombia, para investigar, buscar la verdad y servir a mi país.</p>
+    </section>
+
+    <hr>
+
+    <section class="seccion s2" id="formacion">
+        <h2>Formación Académica</h2>
+        <p class="dato">🏫 <strong>Institución:</strong> Institución Educativa El Chairá José María Córdoba</p>
+        <p class="dato">📖 <strong>Grado:</strong> 11-1 — Bachillerato Académico</p>
+        <p class="dato">🎓 <strong>Técnico:</strong> Contabilización de Operaciones Comerciales y Financieras — SENA</p>
+        <p style="margin-top:15px;">En este proceso he aprendido a ser organizado, preciso y a analizar cada detalle, habilidades fundamentales para mi futuro.</p>
+    </section>
+
+    <hr>
+
+    <section class="seccion s3" id="habilidades">
+        <h2>Habilidades</h2>
+        
+        <h3>✨ Blandas</h3>
+        <p>🤝 Tolerancia &nbsp;|&nbsp; ⏳ Paciencia &nbsp;|&nbsp; 🧠 Pensamiento analítico &nbsp;|&nbsp; 💜 Empatía &nbsp;|&nbsp; ⭐ Responsabilidad</p>
+        
+        <h3>💻 Técnicas</h3>
+        <p>📝 Word, PowerPoint y Google Docs<br>
+        📊 Excel — Nivel básico<br>
+        💰 Contabilidad y procesos financieros<br>
+        🧩 Análisis y resolución de problemas</p>
+    </section>
+
+    <hr>
+
+    <section class="seccion s4" id="proyectos">
+        <h2>Proyectos Realizados</h2>
+        
+        <div class="proyecto">
+            <p><strong>🛒 Feria Empresarial</strong><br>
+            Organización, venta de productos y control de ingresos y gastos. Aprendí cómo funciona un negocio real, el valor del trabajo en equipo y la responsabilidad de llevar todo claro.</p>
+        </div>
+        
+        <div class="proyecto">
+            <p><strong>📓 Taller Contable</strong><br>
+            Registro y análisis de operaciones financieras. Aprendí que el orden y la exactitud lo son todo: cada dato cuenta y no hay margen para errores.</p>
+        </div>
+        
+        <div class="proyecto">
+            <p><strong>🔬 Feria de la Ciencia</strong><br>
+            Proyectos de Química, Física y Tecnología. Aprendí a investigar con evidencia: no basta con creer, hay que comprobar, experimentar y buscar respuestas reales.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="seccion s5" id="contacto">
+        <h2>Contacto</h2>
+        <p class="dato">👤 <strong>Nombre:</strong> Darwin Fabián Ducuara Díaz</p>
+        <p class="dato">📍 <strong>Lugar:</strong> Cartagena del Chairá, Caquetá</p>
+        <p class="dato">📧 <strong>Correo:</strong> darwinducuara716@gmail.com</p>
+        <p class="dato">📱 <strong>Teléfono:</strong> 3209786556</p>
+        <p class="dato">🎯 <strong>Meta:</strong> Criminalística — DIJIN / SIJIN</p>
+    </section>
+
+    <div class="pie">
+        <p>"Cada esfuerzo me acerca más a cumplir mi sueño."</p>
+        <p style="margin-top:10px; font-size:1.3em;" class="corazón">❤️</p>
+        <p style="margin-top:5px; font-size:0.9em; opacity:0.8;">Portafolio Escolar — 2026</p>
+    </div>
+</div>
+
+</body>
+</html>
+
